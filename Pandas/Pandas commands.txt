@@ -1,0 +1,39 @@
+import pandas as pd
+
+# Creating a DataFrame
+df = pd.DataFrame()
+
+# Basic DataFrame operations
+df.head()
+df.tail()
+df.info()
+df.describe()
+
+# Indexing and Selecting Data
+df['column_name']
+df[['column1', 'column2']]
+df.loc[0]
+df.iloc[0]
+
+# Filtering Data
+df[df['column'] > 10]
+
+# Adding and Removing Columns
+df['new_column'] = values
+df.drop('column_to_drop', axis=1, inplace=True)
+
+# Handling Missing Data
+df.dropna()
+df.fillna(value)
+
+# Grouping and Aggregation
+df.groupby('column').mean()
+
+# Merging and Concatenating DataFrames
+pd.concat([df1, df2], axis=0)
+pd.concat([df1, df2], axis=1)
+pd.merge(df1, df2, on='key_column', how='inner')
+
+# Reading and Writing Data
+pd.read_csv('file.csv')
+df.to_csv('output.csv', index=False)
